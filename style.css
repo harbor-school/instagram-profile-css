@@ -6,6 +6,8 @@ body {
 }
 main {
   padding: 30px 20px 0px 20px;
+  max-width: 935px;
+  margin: 0 auto;
 }
 
 /* Navigation */
@@ -69,6 +71,7 @@ header{
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 30px;
+  margin-bottom: 44px;
 }
 .profile-pic {
   height: 160px;
@@ -126,4 +129,54 @@ header{
 
 .row.descriptions a {
   color: rgb(0, 55, 107);
+}
+
+/* Story */
+.stories {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 44px;
+}
+.story-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 15px;
+}
+.story-item .story-item-wrap {
+  padding: 5px;
+  border-radius: 1000px;
+  border: 1px solid rgb(219, 219, 219);
+}
+.story-item img {
+  border-radius: 1000px;
+  width: 77px;
+  height: 77px;
+}
+.story-item .title {
+  padding-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80px;
+  text-align: center;
+  white-space: nowrap;
+}
+.slider-next-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.arrow-right-icon {
+  background-image: url("/images/icons.png");
+  background-size: 440px 411px;
+  background-position: -402px -207px;
+  transform: scaleX(-1);
+  width: 24px;
+  height: 24px;
 }
