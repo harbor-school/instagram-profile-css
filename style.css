@@ -201,3 +201,27 @@ header{
   border-top: 1px solid rgb(38, 38, 38);
   margin-top: -1px;
  }
+
+ /* Gallery */
+ .gallery {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 28px;
+ }
+ .gallery-item {
+  position: relative;
+ }
+ .gallery-item img {
+   width: 100%;
+ }
+ .media-icon {
+  background-image: url("/images/icons-2.png");
+  background-size: 65px 65px;
+  background-position: 0 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+ }
