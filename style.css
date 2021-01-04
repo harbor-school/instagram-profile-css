@@ -1,0 +1,129 @@
+@import url('./reset.css');
+
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+main {
+  padding: 30px 20px 0px 20px;
+}
+
+/* Navigation */
+nav {
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+.nav {
+  max-width: 935px;
+  margin: 0 auto;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: green; */
+}
+.logo {
+  height: 29px;
+}
+
+.search-guide {
+  width: 215px;
+  background: rgb(250, 250, 250);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 26px;
+  border-radius: 3px;
+  border: 1px solid rgb(219, 219, 219);
+}
+.search-icon {
+  background-image: url("/images/icons.png");
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-size: 440px 411px;
+  background-position: -428px -241px;
+  background-position-x: -428px;
+  background-position-y: -241px;
+  margin-right: 6px;
+}
+.search-placeholder {
+  color: rgb(142, 142, 142);
+  font-size: 14px;
+}
+button {
+  all: unset;
+  font-weight: 600;
+  line-height: 18px;
+  font-size: 14px;
+  color: #0095f6;
+  padding: 5px 9px;
+  border-radius: 4px;
+}
+button.primary {
+  background: #0095f6;
+  color: white;
+}
+
+/* Profile */
+header{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 30px;
+}
+.profile-pic {
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 1000px;
+  border: 1px solid rgb(219, 219, 219);
+}
+
+.profile-info .row {
+  margin-bottom: 20px;
+}
+.row.title {
+  display: flex;
+  align-items: center;
+}
+.title h2 {
+  font-size: 28px;
+  font-weight: 300;
+}
+.verfied-icon {
+  background-image: url("/images/icons.png");
+  background-position: -194px -351px;
+  background-size: 440px 411px;
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+}
+.row.details ul {
+  display: flex;
+
+}
+.row.details li {
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 40px;
+}
+.row.details li span {
+  font-weight: 600;
+}
+.row.descriptions h1 {
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.row.descriptions span {
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.row.descriptions a {
+  color: rgb(0, 55, 107);
+}

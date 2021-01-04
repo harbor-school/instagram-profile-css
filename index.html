@@ -4,15 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Modern CSS Basics - CSS Position (fixed)</title>
-    <link rel="stylesheet" href="reset.css" />
+    <title>Modern CSS Basics - Instagram Profile Page (Syntax - Class)</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      Header!!
-    </div>
-    <div>Profile</div>
-    <div>Story</div>
-    <div>Gallery</div>
+    <nav>
+      <div class="nav">
+        <img class="logo" alt='logo' src='/images/logo.png' />
+        <div class="search-guide">
+          <span class="search-icon"></span>
+          <span class="search-placeholder">Search</span>
+        </div>
+        <div>
+          <button class="primary">Log In</button>
+          <button>Sign Up</button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <header>
+        <div class="profile-pic">
+          <img alt='profile-logo' src='/images/profile-logo.jpg' />
+        </div>
+        <div class="profile-info">
+          <div class="row title">
+            <h2>apple</h2>
+            <div class="verfied-icon"></div>
+            <button class="primary" style="margin-left: 20px;">Follow</button>
+          </div>
+          <div class="row details">
+            <ul>
+              <li>
+                <span>722</span> posts
+              </li>
+              <li>
+                <span>25.1m</span> followers
+              </li>
+              <li>
+                <span>6</span> following
+              </li>
+            </ul>
+          </div>
+          <div class="row descriptions">
+            <h1>apple</h1>
+            <span>
+              Everyone has a story to tell.
+              <br/>
+              Tag <a>#ShotoniPhone</a> to take part.
+            </span>
+          </div>
+        </div>
+      </header>
+      <div>Story</div>
+      <div>Gallery</div>
+    </main>
   </body>
 </html>
