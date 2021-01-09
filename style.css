@@ -46,6 +46,11 @@ nav {
   border-radius: 3px;
   border: 1px solid hsl(0, 0%, 86%);
 }
+@media only screen and (max-width: 500px) {
+  .search-guide {
+    display: none;
+  }
+}
 .search-icon {
   background-image: url("/images/icons.png");
   width: 10px;
