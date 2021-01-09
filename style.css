@@ -90,6 +90,9 @@ header {
 .profile-info .row {
   margin-bottom: 20px;
 }
+.profile-info .row.last {
+  margin-bottom: 0px;
+}
 .row.title {
   display: flex;
   align-items: center;
@@ -151,7 +154,7 @@ header {
   padding: 10px 15px;
 }
 .story-item .story-item-wrap {
-  padding: 5px;
+  padding: 4px;
   border-radius: 1000px;
   border: 1px solid hsl(0, 0%, 86%);
 }
@@ -159,6 +162,7 @@ header {
   border-radius: 1000px;
   width: 77px;
   height: 77px;
+  display: block;
 }
 .story-item .title {
   padding-top: 15px;
