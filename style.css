@@ -1,8 +1,8 @@
-@import url('./reset.css');
-
+@import url("./reset.css");
 
 body {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
 }
 main {
   padding: 30px 20px 0px 20px;
@@ -12,7 +12,7 @@ main {
 
 /* Navigation */
 nav {
-  border-bottom: 1px solid rgb(219, 219, 219);
+  border-bottom: 1px solid hsl(0, 0%, 86%);
 }
 .nav {
   max-width: 935px;
@@ -29,13 +29,13 @@ nav {
 
 .search-guide {
   width: 215px;
-  background: rgb(250, 250, 250);
+  background: hsl(0, 0%, 98%);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 6px 26px;
   border-radius: 3px;
-  border: 1px solid rgb(219, 219, 219);
+  border: 1px solid hsl(0, 0%, 86%);
 }
 .search-icon {
   background-image: url("/images/icons.png");
@@ -49,7 +49,7 @@ nav {
   margin-right: 6px;
 }
 .search-placeholder {
-  color: rgb(142, 142, 142);
+  color: hsl(0, 0%, 56%);
   font-size: 14px;
 }
 button {
@@ -64,10 +64,11 @@ button {
 button.primary {
   background: #0095f6;
   color: white;
+  -webkit-text-fill-color: white;
 }
 
 /* Profile */
-header{
+header {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 30px;
@@ -83,7 +84,7 @@ header{
   width: 150px;
   height: 150px;
   border-radius: 1000px;
-  border: 1px solid rgb(219, 219, 219);
+  border: 1px solid hsl(0, 0%, 86%);
 }
 
 .profile-info .row {
@@ -107,7 +108,6 @@ header{
 }
 .row.details ul {
   display: flex;
-
 }
 .row.details li {
   font-size: 16px;
@@ -128,7 +128,7 @@ header{
 }
 
 .row.descriptions a {
-  color: rgb(0, 55, 107);
+  color: hsl(209, 100%, 21%);
 }
 
 /* Story */
@@ -137,6 +137,12 @@ header{
   justify-content: center;
   position: relative;
   margin-bottom: 44px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: start;
+  position: relative;
+  margin-bottom: 44px;
+  overflow-x: scroll;
 }
 .story-item {
   display: flex;
@@ -147,7 +153,7 @@ header{
 .story-item .story-item-wrap {
   padding: 5px;
   border-radius: 1000px;
-  border: 1px solid rgb(219, 219, 219);
+  border: 1px solid hsl(0, 0%, 86%);
 }
 .story-item img {
   border-radius: 1000px;
@@ -183,7 +189,7 @@ header{
 
 /* Tabs */
 .tabs {
-  border-top: 1px solid rgb(219, 219, 219);
+  border-top: 1px solid hsl(0, 0%, 86%);
   display: flex;
   justify-content: center;
 }
@@ -191,6 +197,7 @@ header{
   display: flex;
   align-items: center;
   height: 52px;
+  color: hsl(0, 0%, 56%);
 }
 .tab-item span {
   margin-left: 6px;
@@ -198,23 +205,24 @@ header{
   font-weight: 600;
 }
 .tab-item.active {
-  border-top: 1px solid rgb(38, 38, 38);
+  border-top: 1px solid hsl(0, 0%, 15%);
   margin-top: -1px;
- }
+  color: hsl(0, 0%, 15%);
+}
 
- /* Gallery */
- .gallery {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 28px;
- }
- .gallery-item {
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.gallery-item {
   position: relative;
- }
- .gallery-item img {
-   width: 100%;
- }
- .media-icon {
+}
+.gallery-item img {
+  width: 100%;
+}
+.media-icon {
   background-image: url("/images/icons-2.png");
   background-size: 65px 65px;
   background-position: 0 0;
@@ -224,4 +232,4 @@ header{
   position: absolute;
   top: 0px;
   right: 0px;
- }
+}
