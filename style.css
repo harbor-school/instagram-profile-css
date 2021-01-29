@@ -1,5 +1,6 @@
 @import url("./reset.css");
 
+/* Common */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
@@ -14,66 +15,6 @@ main {
     padding: 0;
   }
 }
-
-/* Navigation */
-nav .mock {
-  height: 54px;
-}
-nav .fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  border-bottom: 1px solid hsl(0, 0%, 86%);
-  z-index: 1;
-}
-.nav {
-  max-width: 935px;
-  margin: 0 auto;
-  height: 54px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media only screen and (max-width: 735px) {
-  .nav {
-    padding: 0 20px;
-  }
-}
-.logo {
-  height: 29px;
-}
-
-.search-guide {
-  width: 215px;
-  background: hsl(0, 0%, 98%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6px 26px;
-  border-radius: 3px;
-  border: 1px solid hsl(0, 0%, 86%);
-}
-@media only screen and (max-width: 500px) {
-  .search-guide {
-    display: none;
-  }
-}
-.search-icon {
-  background-image: url("/images/icons.png");
-  width: 10px;
-  height: 10px;
-  display: block;
-  background-size: 440px 411px;
-  background-position: -428px -241px;
-  background-position-x: -428px;
-  background-position-y: -241px;
-  margin-right: 6px;
-}
-.search-placeholder {
-  color: hsl(0, 0%, 56%);
-  font-size: 14px;
-}
 button {
   all: unset;
   font-weight: 600;
@@ -87,6 +28,106 @@ button.primary {
   background: #0095f6;
   color: white;
   -webkit-text-fill-color: white;
+}
+.only-mobile {
+  display: none;
+}
+@media only screen and (max-width: 735px) {
+  .only-mobile {
+    display: block;
+  }
+}
+@media only screen and (max-width: 735px) {
+  .only-desktop {
+    display: none;
+  }
+}
+.verfied-icon {
+  display: inline-block;
+  background-image: url("/images/icons.png");
+  background-position: -194px -351px;
+  background-size: 440px 411px;
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+}
+.arrow-right-icon {
+  background-image: url("/images/icons.png");
+  background-size: 440px 411px;
+  background-position: -402px -207px;
+  transform: scaleX(-1);
+  width: 24px;
+  height: 24px;
+}
+.media-icon {
+  background-image: url("/images/icons-2.png");
+  background-size: 65px 65px;
+  background-position: 0 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+/* Navigation */
+nav .mock {
+  height: 54px;
+}
+nav .fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+  z-index: 1;
+}
+nav .nav-content {
+  max-width: 935px;
+  margin: 0 auto;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 735px) {
+  nav .nav-content {
+    padding: 0 20px;
+  }
+}
+.nav-content .logo {
+  height: 29px;
+}
+.nav-content .search-guide {
+  width: 215px;
+  background: hsl(0, 0%, 98%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 26px;
+  border-radius: 3px;
+  border: 1px solid hsl(0, 0%, 86%);
+}
+@media only screen and (max-width: 500px) {
+  .nav-content .search-guide {
+    display: none;
+  }
+}
+.search-guide .search-icon {
+  background-image: url("/images/icons.png");
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-size: 440px 411px;
+  background-position: -428px -241px;
+  background-position-x: -428px;
+  background-position-y: -241px;
+  margin-right: 6px;
+}
+.search-guide .search-placeholder {
+  color: hsl(0, 0%, 56%);
+  font-size: 14px;
 }
 
 /* Profile */
@@ -110,24 +151,24 @@ header {
   }
 }
 
-.profile-pic {
+.header-wrap .profile-pic {
   height: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.profile-pic img {
+.header-wrap .profile-pic img {
   width: 150px;
   height: 150px;
   border-radius: 1000px;
   border: 1px solid hsl(0, 0%, 86%);
 }
 @media only screen and (max-width: 735px) {
-  .profile-pic {
+  .header-wrap .profile-pic {
     width: 77px;
     height: 77px;
   }
-  .profile-pic img {
+  .header-wrap .profile-pic img {
     width: 100%;
     height: 100%;
   }
@@ -139,39 +180,30 @@ header {
 .profile-info .row.last {
   margin-bottom: 0px;
 }
-
-.row.title {
+.profile-info .row.title {
   display: flex;
   align-items: center;
 }
 @media only screen and (max-width: 735px) {
-  .row.title {
+  .profile-info .row.title {
     display: block;
   }
 }
-.title h2 {
+.profile-info .title h2 {
   font-size: 28px;
   font-weight: 300;
 }
 @media only screen and (max-width: 735px) {
-  .title h2 {
+  .profile-info .title h2 {
     display: inline-block;
     margin-bottom: 12px;
   }
-  .title button {
+  .profile-info .title button {
     display: block;
     margin-left: 0 !important;
   }
 }
-.verfied-icon {
-  display: inline-block;
-  background-image: url("/images/icons.png");
-  background-position: -194px -351px;
-  background-size: 440px 411px;
-  width: 18px;
-  height: 18px;
-  margin-left: 8px;
-}
+
 .row.details ul {
   display: flex;
 }
@@ -187,12 +219,10 @@ header {
   font-weight: 600;
   line-height: 24px;
 }
-
 .row.descriptions span {
   font-weight: 400;
   line-height: 24px;
 }
-
 .row.descriptions a {
   color: hsl(209, 100%, 21%);
 }
@@ -276,20 +306,9 @@ header {
   }
 }
 .slider-next-button {
-  position: absolute;
+  position: sticky;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
   cursor: pointer;
-}
-
-.arrow-right-icon {
-  background-image: url("/images/icons.png");
-  background-size: 440px 411px;
-  background-position: -402px -207px;
-  transform: scaleX(-1);
-  width: 24px;
-  height: 24px;
 }
 
 /* Tabs */
@@ -314,6 +333,7 @@ header {
   margin-top: -1px;
   color: hsl(0, 0%, 15%);
 }
+
 /* Mobile Tabs */
 .mobile-tabs ul {
   display: flex;
@@ -356,30 +376,4 @@ header {
 }
 .gallery-item img {
   width: 100%;
-}
-.media-icon {
-  background-image: url("/images/icons-2.png");
-  background-size: 65px 65px;
-  background-position: 0 0;
-  display: block;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-
-/* Utils */
-.only-mobile {
-  display: none;
-}
-@media only screen and (max-width: 735px) {
-  .only-mobile {
-    display: block;
-  }
-}
-@media only screen and (max-width: 735px) {
-  .only-desktop {
-    display: none;
-  }
 }
