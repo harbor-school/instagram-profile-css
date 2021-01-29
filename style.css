@@ -16,8 +16,16 @@ main {
 }
 
 /* Navigation */
-nav {
+nav .mock {
+  height: 54px;
+}
+nav .fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
   border-bottom: 1px solid hsl(0, 0%, 86%);
+  z-index: 1;
 }
 .nav {
   max-width: 935px;
