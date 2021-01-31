@@ -2,34 +2,15 @@
 @import url("./common.css");
 
 /* Navigation */
-nav .mock {
-  height: 54px;
-}
-nav .fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  border-bottom: 1px solid hsl(0, 0%, 86%);
-  z-index: 1;
-}
-nav .nav-content {
-  max-width: 935px;
-  margin: 0 auto;
-  height: 54px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media only screen and (max-width: 735px) {
-  nav .nav-content {
-    padding: 0 20px;
-  }
-}
 .nav-content .logo {
   height: 29px;
 }
-.nav-content .search-guide {
+.search-guide .search-placeholder {
+  color: hsl(0, 0%, 56%);
+  font-size: 14px;
+  margin-left: 6px;
+}
+.search-guide {
   width: 215px;
   background: hsl(0, 0%, 98%);
   display: flex;
@@ -44,20 +25,29 @@ nav .nav-content {
     display: none;
   }
 }
-.search-guide .search-icon {
-  background-image: url("/images/icons.png");
-  width: 10px;
-  height: 10px;
-  display: block;
-  background-size: 440px 411px;
-  background-position: -428px -241px;
-  background-position-x: -428px;
-  background-position-y: -241px;
-  margin-right: 6px;
+nav .nav-content {
+  max-width: 935px;
+  margin: 0 auto;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.search-guide .search-placeholder {
-  color: hsl(0, 0%, 56%);
-  font-size: 14px;
+@media only screen and (max-width: 735px) {
+  nav .nav-content {
+    padding: 0 20px;
+  }
+}
+nav .mock {
+  height: 54px;
+}
+nav .fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+  z-index: 1;
 }
 
 /* Profile */
@@ -104,24 +94,15 @@ header {
   }
 }
 
-.profile-info .row {
-  margin-bottom: 20px;
-}
-.profile-info .row.last {
-  margin-bottom: 0px;
-}
-.profile-info .row.title {
-  display: flex;
-  align-items: center;
-}
-@media only screen and (max-width: 735px) {
-  .profile-info .row.title {
-    display: block;
-  }
-}
 .profile-info .title h2 {
   font-size: 28px;
   font-weight: 300;
+}
+.profile-info .title span {
+  margin-left: 8px;
+}
+.profile-info .title button {
+  margin-left: 20px;
 }
 @media only screen and (max-width: 735px) {
   .profile-info .title h2 {
@@ -133,60 +114,91 @@ header {
     margin-left: 0 !important;
   }
 }
-
-.row.details ul {
+.profile-info .title {
   display: flex;
+  align-items: center;
 }
-.row.details li {
+@media only screen and (max-width: 735px) {
+  .profile-info .title {
+    display: block;
+  }
+}
+.profile-info .details li {
   font-size: 16px;
   font-weight: 400;
   margin-right: 40px;
 }
-.row.details li span {
+.profile-info .details li span {
   font-weight: 600;
 }
-.row.descriptions h1 {
+.profile-info .details ul {
+  display: flex;
+}
+.profile-info .descriptions h1 {
   font-weight: 600;
   line-height: 24px;
 }
-.row.descriptions span {
+.profile-info .descriptions span {
   font-weight: 400;
   line-height: 24px;
 }
-.row.descriptions a {
+.profile-info .descriptions a {
   color: hsl(209, 100%, 21%);
 }
 @media only screen and (max-width: 735px) {
-  .row.descriptions {
+  .profile-info .descriptions {
     padding-left: 16px;
     padding-bottom: 21px;
     font-size: 14px;
   }
-  .row.descriptions h1 {
+  .profile-info .descriptions h1 {
     line-height: 20px;
   }
-  .row.descriptions span {
+  .profile-info .descriptions span {
     line-height: 20px;
   }
+}
+.profile-info .row {
+  margin-bottom: 20px;
+}
+.profile-info .row.last {
+  margin-bottom: 0px;
 }
 
 /* Story */
-.stories {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 44px;
-  padding: 0 24px;
-  display: flex;
-  justify-content: start;
-  position: relative;
-  margin-bottom: 44px;
-  overflow-x: scroll;
+.story-item .image {
+  padding: 3px;
+  border-radius: 1000px;
+  border: 1px solid hsl(0, 0%, 86%);
+}
+.story-item .image img {
+  border-radius: 1000px;
+  width: 77px;
+  height: 77px;
+  display: block;
 }
 @media only screen and (max-width: 735px) {
-  .stories {
-    padding: 0;
-    margin-bottom: 21px;
+  .story-item .image img {
+    width: 56px;
+    height: 56px;
+  }
+}
+.story-item .title {
+  padding-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media only screen and (max-width: 735px) {
+  .story-item .title {
+    font-size: 12px;
+    padding-top: 8px;
+    font-weight: 400;
+    width: 65px;
   }
 }
 .story-item {
@@ -200,68 +212,48 @@ header {
     padding: 0px 5px;
   }
 }
-.story-item .story-item-wrap {
-  padding: 3px;
-  border-radius: 1000px;
-  border: 1px solid hsl(0, 0%, 86%);
-}
-.story-item img {
-  border-radius: 1000px;
-  width: 77px;
-  height: 77px;
-  display: block;
+.stories {
+  display: flex;
+  justify-content: start;
+  padding: 0 24px;
+  overflow-x: scroll;
+  position: relative;
+  margin-bottom: 44px;
 }
 @media only screen and (max-width: 735px) {
-  .story-item img {
-    width: 56px;
-    height: 56px;
+  .stories {
+    padding: 0;
+    margin-bottom: 21px;
   }
 }
-.story-item .title {
-  padding-top: 15px;
-  font-size: 14px;
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 80px;
-  text-align: center;
-  white-space: nowrap;
-}
-@media only screen and (max-width: 735px) {
-  .story-item .title {
-    font-size: 12px;
-    padding-top: 8px;
-    font-weight: 400;
-    width: 65px;
-  }
-}
-.slider-next-button {
+
+.slider-button-next {
   position: sticky;
   right: 0;
   cursor: pointer;
 }
 
 /* Tabs */
-.tabs {
-  border-top: 1px solid hsl(0, 0%, 86%);
-  display: flex;
-  justify-content: center;
+.tab-item span {
+  font-size: 12px;
+  font-weight: 600;
+  color: hsl(0, 0%, 56%);
+  margin-left: 6px;
 }
 .tab-item {
   display: flex;
   align-items: center;
   height: 52px;
-  color: hsl(0, 0%, 56%);
-}
-.tab-item span {
-  margin-left: 6px;
-  font-size: 12px;
-  font-weight: 600;
 }
 .tab-item.active {
   border-top: 1px solid hsl(0, 0%, 15%);
   margin-top: -1px;
   color: hsl(0, 0%, 15%);
+}
+.tabs {
+  border-top: 1px solid hsl(0, 0%, 86%);
+  display: flex;
+  justify-content: center;
 }
 
 /* Mobile Tabs */

@@ -16,9 +16,9 @@ main {
 button {
   all: unset;
   font-weight: 600;
-  line-height: 18px;
   font-size: 14px;
   color: #0095f6;
+  line-height: 18px;
   padding: 5px 9px;
   border-radius: 4px;
 }
@@ -40,6 +40,14 @@ button.primary {
     display: none;
   }
 }
+.search-icon {
+  background-image: url("/images/icons.png");
+  background-size: 440px 411px;
+  background-position: -428px -241px;
+  width: 10px;
+  height: 10px;
+  display: block;
+}
 .verfied-icon {
   display: inline-block;
   background-image: url("/images/icons.png");
@@ -47,15 +55,15 @@ button.primary {
   background-size: 440px 411px;
   width: 18px;
   height: 18px;
-  margin-left: 8px;
 }
 .arrow-right-icon {
   background-image: url("/images/icons.png");
   background-size: 440px 411px;
   background-position: -402px -207px;
-  transform: scaleX(-1);
   width: 24px;
   height: 24px;
+  /* transform: scaleX(-1); */
+  transform: rotate(180deg);
 }
 .media-icon {
   background-image: url("/images/icons-2.png");
