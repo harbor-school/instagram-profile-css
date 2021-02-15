@@ -20,11 +20,6 @@
   border-radius: 3px;
   border: 1px solid hsl(0, 0%, 86%);
 }
-@media only screen and (max-width: 500px) {
-  .nav-content .search-guide {
-    display: none;
-  }
-}
 nav .nav-content {
   max-width: 935px;
   margin: 0 auto;
@@ -67,7 +62,7 @@ header {
   .header-wrap {
     display: flex;
     padding: 14px;
-    column-gap: 28px;
+    column-gap: 0px;
   }
 }
 
@@ -87,6 +82,7 @@ header {
   .header-wrap .profile-pic {
     width: 77px;
     height: 77px;
+    margin-right: 28px;
   }
   .header-wrap .profile-pic img {
     width: 100%;
@@ -105,13 +101,19 @@ header {
   margin-left: 20px;
 }
 @media only screen and (max-width: 735px) {
+  .profile-info .title {
+    display: block;
+  }
   .profile-info .title h2 {
     display: inline-block;
     margin-bottom: 12px;
   }
+  .profile-info .title span {
+    display: inline-block;
+  }
   .profile-info .title button {
     display: block;
-    margin-left: 0 !important;
+    margin-left: 0px;
   }
 }
 .profile-info .title {
@@ -150,6 +152,7 @@ header {
     padding-left: 16px;
     padding-bottom: 21px;
     font-size: 14px;
+    margin-bottom: 0px !important;
   }
   .profile-info .descriptions h1 {
     line-height: 20px;
@@ -257,27 +260,27 @@ header {
 }
 
 /* Mobile Tabs */
-.mobile-tabs ul {
-  display: flex;
-  justify-content: space-around;
-  padding: 12px 0;
-  border-top: 1px solid rgb(219, 219, 219);
-}
 .mobile-tabs li {
   font-size: 14px;
   font-weight: 400;
-  text-align: center;
-  line-height: 18px;
   color: rgb(142, 142, 142);
+  line-height: 18px;
+  text-align: center;
 }
 .mobile-tabs li div {
   font-weight: 600;
   color: rgb(38, 38, 38);
 }
+.mobile-tabs ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 12px 0;
+  border-top: 1px solid rgb(219, 219, 219);
+}
 .mobile-tabs .actions {
-  height: 44px;
   display: flex;
   justify-content: space-around;
+  height: 44px;
   align-items: center;
   border-top: 1px solid rgb(219, 219, 219);
 }
@@ -298,4 +301,10 @@ header {
 }
 .gallery-item img {
   width: 100%;
+  display: block;
+}
+.gallery-item .media-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
