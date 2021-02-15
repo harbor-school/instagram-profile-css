@@ -4,16 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Modern CSS Basics - Instagram Profile Page (Syntax - Class)</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Instagram Clone</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-
   <body>
     <nav>
-      <div class="mock"></div>
       <div class="fixed">
         <div class="nav-content">
-          <img class="logo" alt="logo" src="/images/logo.png" />
+          <img src="/images/logo.png" class="logo" />
           <div class="desktop-only">
             <div class="search-guide">
               <span class="search-icon"></span>
@@ -26,17 +24,18 @@
           </div>
         </div>
       </div>
+      <div class="mock"></div>
     </nav>
     <main>
       <header>
-        <div class="header-wrap">
+        <div class="header-grid">
           <div class="profile-pic">
-            <img src="/images/profile-logo.jpg" alt="profile-logo" />
+            <img src="images/profile-logo.jpg" />
           </div>
           <div class="profile-info">
             <div class="title row">
               <h2>apple</h2>
-              <span class="verfied-icon"></span>
+              <span class="verified-icon"></span>
               <button class="primary">Follow</button>
             </div>
             <div class="desktop-only">
@@ -47,7 +46,7 @@
                   <li><span>6</span> following</li>
                 </ul>
               </div>
-              <div class="descriptions row last">
+              <div class="description row last">
                 <h1>apple</h1>
                 <span>
                   Everyone has a story to tell.
@@ -59,7 +58,7 @@
           </div>
         </div>
         <div class="profile-info mobile-only">
-          <div class="descriptions row">
+          <div class="description row">
             <h1>apple</h1>
             <span>
               Everyone has a story to tell.
@@ -137,14 +136,14 @@
           </div>
           <div class="title">💧+💡</div>
         </li>
-        <button class="slider-button-next desktop-only">
+        <div class="slider-button-next">
           <div class="arrow-right-icon"></div>
-        </button>
+        </div>
       </ul>
 
       <div class="desktop-only">
         <div class="tabs">
-          <div class="tab-item active" style="margin-right: 60px;">
+          <div class="tab-item active">
             <svg
               aria-label="Posts"
               class="_8-yf5"
@@ -161,7 +160,7 @@
             </svg>
             <span>POSTS</span>
           </div>
-          <div class="tab-item" style="margin-right: 60px;">
+          <div class="tab-item">
             <svg
               aria-label="Posts"
               class="_8-yf5"
@@ -176,7 +175,7 @@
             </svg>
             <span>IGTV</span>
           </div>
-          <div class="tab-item">
+          <div class="tab-item last">
             <svg
               aria-label="Tagged"
               class="_8-yf5"
@@ -252,26 +251,35 @@
 
       <div class="gallery">
         <div class="gallery-item">
-          <img alt="gallery-post" src="/images/gallery-1.jpg" />
+          <img src="images/gallery-1.jpg" />
           <span class="media-icon"></span>
         </div>
         <div class="gallery-item">
-          <img alt="gallery-post" src="/images/gallery-2.jpg" />
+          <img src="images/gallery-2.jpg" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-3.jpg" />
           <span class="media-icon"></span>
         </div>
         <div class="gallery-item">
-          <img alt="gallery-post" src="/images/gallery-3.jpg" />
+          <img src="images/gallery-4.jpg" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-5.jpg" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-6.jpg" />
           <span class="media-icon"></span>
         </div>
         <div class="gallery-item">
-          <img alt="gallery-post" src="/images/gallery-4.jpg" />
+          <img src="images/gallery-7.jpg" />
         </div>
         <div class="gallery-item">
-          <img alt="gallery-post" src="/images/gallery-5.jpg" />
-        </div>
-        <div class="gallery-item">
-          <img alt="gallery-post" src="/images/gallery-6.jpg" />
+          <img src="images/gallery-8.jpg" />
           <span class="media-icon"></span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/gallery-9.jpg" />
         </div>
       </div>
     </main>
